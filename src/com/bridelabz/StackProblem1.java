@@ -31,6 +31,15 @@ public class StackProblem1 {
             head = newNode;
         }
 
+        public int pop() {
+            if (isEmpty()) {
+                return -1;
+            }
+            int top = head.data;
+            head = head.next;
+            return top;
+        }
+
         public static void main(String[] args) {
             StackProblem.Stack stack = new StackProblem.Stack();
             System.out.println("The Result of Stack is : ");
@@ -39,6 +48,11 @@ public class StackProblem1 {
             StackProblem.Stack.push(2);
             StackProblem.Stack.push(3);
             StackProblem.Stack.push(4);
+
+            while (!StackProblem.Stack.isEmpty()) {
+                System.out.println(StackProblem.Stack.peek());
+                stack.pop();
+            }
         }
     }
 }
