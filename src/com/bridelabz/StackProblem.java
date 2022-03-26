@@ -49,6 +49,8 @@ public class StackProblem {
     }
     public static void main(String[] args) {
         Stack stack = new Stack();
+        System.out.println("The Result of Stack is : ");
+        System.out.println("===========================");
         Stack.push(1);
         Stack.push(2);
         Stack.push(3);
