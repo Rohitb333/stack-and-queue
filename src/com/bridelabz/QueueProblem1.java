@@ -31,6 +31,22 @@ public class QueueProblem1 {
             tail.next = newNode;
             tail = newNode;
         }
+        //Dequeue  - Delete Element in Queue
+        public static int remove()
+        {
+            if (isEmpty())
+            {
+                System.out.println("Empty Queue");
+                return -1;
+            }
+            int front = head.data;
+            if (head == tail)
+            {
+                tail = null;
+            }
+            head = head.next;
+            return front;
+        }
 
         public static void main(String[] args) {
             QueueProblem.Queue queue = new QueueProblem.Queue();
@@ -40,6 +56,10 @@ public class QueueProblem1 {
             queue.add(2);
             queue.add(3);
             queue.add(4);
+            while (! queue.isEmpty()) {
+                System.out.println(queue.peek());
+                queue.remove();
+            }
         }
 
     }
