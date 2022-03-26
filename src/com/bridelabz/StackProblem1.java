@@ -30,6 +30,12 @@ public class StackProblem1 {
             newNode.next = head;
             head = newNode;
         }
+        public static int peek() {
+            if (isEmpty()) {
+                return -1;
+            }
+            return head.data;
+        }
 
         public int pop() {
             if (isEmpty()) {
