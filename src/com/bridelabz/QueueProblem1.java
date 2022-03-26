@@ -47,6 +47,16 @@ public class QueueProblem1 {
             head = head.next;
             return front;
         }
+        // peek -
+        public static int peek()
+        {
+            if (isEmpty())
+            {
+                System.out.println("Empty Queue");
+                return -1;
+            }
+            return head.data;
+        }
 
         public static void main(String[] args) {
             QueueProblem.Queue queue = new QueueProblem.Queue();
